@@ -1,0 +1,262 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (malloc) failed to allocate 32744 bytes for ChunkPool::allocate
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   In 32 bit mode, the process size limit was hit
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Use 64 bit Java on a 64 bit OS
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (allocation.cpp:273), pid=44496, tid=0x000000000000b5f4
+#
+# JRE version: Java(TM) SE Runtime Environment (8.0_121-b13) (build 1.8.0_121-b13)
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (25.121-b13 mixed mode windows-amd64 compressed oops)
+# Failed to write core dump. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x0000000003308000):  JavaThread "main" [_thread_in_vm, id=46580, stack(0x0000000003200000,0x0000000003300000)]
+
+Stack: [0x0000000003200000,0x0000000003300000]
+[error occurred during error reporting (printing stack bounds), id 0xc0000005]
+
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+
+Java frames: (J=compiled Java code, j=interpreted, Vv=VM code)
+j  sun.misc.Unsafe.defineAnonymousClass(Ljava/lang/Class;[B[Ljava/lang/Object;)Ljava/lang/Class;+0
+j  java.lang.invoke.InvokerBytecodeGenerator.loadAndInitializeInvokerClass([B[Ljava/lang/Object;)Ljava/lang/Class;+8
+j  java.lang.invoke.InvokerBytecodeGenerator.loadMethod([B)Ljava/lang/invoke/MemberName;+6
+j  java.lang.invoke.InvokerBytecodeGenerator.generateCustomizedCode(Ljava/lang/invoke/LambdaForm;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/MemberName;+17
+j  java.lang.invoke.LambdaForm.compileToBytecode()Ljava/lang/invoke/MemberName;+65
+j  java.lang.invoke.DirectMethodHandle.makePreparedLambdaForm(Ljava/lang/invoke/MethodType;I)Ljava/lang/invoke/LambdaForm;+638
+j  java.lang.invoke.DirectMethodHandle.preparedLambdaForm(Ljava/lang/invoke/MethodType;I)Ljava/lang/invoke/LambdaForm;+17
+j  java.lang.invoke.DirectMethodHandle.preparedLambdaForm(Ljava/lang/invoke/MemberName;)Ljava/lang/invoke/LambdaForm;+151
+j  java.lang.invoke.DirectMethodHandle.make(BLjava/lang/Class;Ljava/lang/invoke/MemberName;)Ljava/lang/invoke/DirectMethodHandle;+94
+j  java.lang.invoke.MethodHandles$Lookup.getDirectMethodCommon(BLjava/lang/Class;Ljava/lang/invoke/MemberName;ZZLjava/lang/Class;)Ljava/lang/invoke/MethodHandle;+201
+j  java.lang.invoke.MethodHandles$Lookup.getDirectMethod(BLjava/lang/Class;Ljava/lang/invoke/MemberName;Ljava/lang/Class;)Ljava/lang/invoke/MethodHandle;+8
+j  java.lang.invoke.MethodHandles$Lookup.findStatic(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/MethodHandle;+23
+j  java.lang.invoke.MethodHandleImpl.findCollector(Ljava/lang/String;ILjava/lang/Class;[Ljava/lang/Class;)Ljava/lang/invoke/MethodHandle;+23
+j  java.lang.invoke.MethodHandleImpl.makeArrays()[Ljava/lang/invoke/MethodHandle;+20
+j  java.lang.invoke.MethodHandleImpl.access$000()[Ljava/lang/invoke/MethodHandle;+0
+j  java.lang.invoke.MethodHandleImpl$Lazy.<clinit>()V+5
+v  ~StubRoutines::call_stub
+j  java.lang.invoke.MethodHandleImpl.varargsArray(I)Ljava/lang/invoke/MethodHandle;+0
+j  java.lang.invoke.MethodHandleImpl.varargsArray(Ljava/lang/Class;I)Ljava/lang/invoke/MethodHandle;+121
+j  java.lang.invoke.MethodHandle.asCollector(Ljava/lang/Class;I)Ljava/lang/invoke/MethodHandle;+36
+j  java.lang.invoke.MethodHandleImpl$AsVarargsCollector.<init>(Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/Class;)V+20
+j  java.lang.invoke.MethodHandleImpl$AsVarargsCollector.<init>(Ljava/lang/invoke/MethodHandle;Ljava/lang/Class;)V+7
+j  java.lang.invoke.MethodHandleImpl.makeVarargsCollector(Ljava/lang/invoke/MethodHandle;Ljava/lang/Class;)Ljava/lang/invoke/MethodHandle;+43
+j  java.lang.invoke.MethodHandle.setVarargs(Ljava/lang/invoke/MemberName;)Ljava/lang/invoke/MethodHandle;+26
+j  java.lang.invoke.MethodHandles$Lookup.getDirectMethodCommon(BLjava/lang/Class;Ljava/lang/invoke/MemberName;ZZLjava/lang/Class;)Ljava/lang/invoke/MethodHandle;+263
+j  java.lang.invoke.MethodHandles$Lookup.getDirectMethod(BLjava/lang/Class;Ljava/lang/invoke/MemberName;Ljava/lang/Class;)Ljava/lang/invoke/MethodHandle;+8
+j  java.lang.invoke.MethodHandles$Lookup.findStatic(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/MethodHandle;+23
+j  java.lang.invoke.CallSite.<clinit>()V+35
+v  ~StubRoutines::call_stub
+j  java.lang.invoke.MethodHandleNatives.linkCallSiteImpl(Ljava/lang/Class;Ljava/lang/invoke/MethodHandle;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/invoke/MemberName;+6
+j  java.lang.invoke.MethodHandleNatives.linkCallSite(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/invoke/MemberName;+45
+v  ~StubRoutines::call_stub
+j  sun.rmi.transport.DGCImpl.<clinit>()V+109
+v  ~StubRoutines::call_stub
+j  sun.rmi.transport.WeakRef.pin()V+15
+j  sun.rmi.transport.Target.pinImpl()V+4
+j  sun.rmi.transport.Target.<init>(Ljava/rmi/Remote;Lsun/rmi/server/Dispatcher;Ljava/rmi/Remote;Ljava/rmi/server/ObjID;Z)V+134
+j  sun.rmi.server.UnicastServerRef.exportObject(Ljava/rmi/Remote;Ljava/lang/Object;Z)Ljava/rmi/Remote;+67
+j  sun.management.jmxremote.ConnectorBootstrap$PermanentExporter.exportObject(Ljava/rmi/Remote;ILjava/rmi/server/RMIClientSocketFactory;Ljava/rmi/server/RMIServerSocketFactory;)Ljava/rmi/Remote;+71
+j  javax.management.remote.rmi.RMIJRMPServerImpl.export(Ljava/rmi/Remote;)V+127
+j  javax.management.remote.rmi.RMIJRMPServerImpl.export()V+12
+j  javax.management.remote.rmi.RMIConnectorServer.start()V+270
+j  sun.management.jmxremote.ConnectorBootstrap.exportMBeanServer(Ljavax/management/MBeanServer;IIZZLjava/lang/String;[Ljava/lang/String;[Ljava/lang/String;ZZLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lsun/management/jmxremote/ConnectorBootstrap$JMXConnectorServerData;+304
+j  sun.management.jmxremote.ConnectorBootstrap.startRemoteConnectorServer(Ljava/lang/String;Ljava/util/Properties;)Ljavax/management/remote/JMXConnectorServer;+820
+j  sun.management.Agent.startAgent(Ljava/util/Properties;)V+66
+j  sun.management.Agent.startAgent()V+19
+v  ~StubRoutines::call_stub
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0x000000001807c000 JavaThread "Service Thread" daemon [_thread_blocked, id=28768, stack(0x0000000019d70000,0x0000000019e70000)]
+  0x0000000018038000 JavaThread "C1 CompilerThread2" daemon [_thread_in_native, id=52436, stack(0x0000000019870000,0x0000000019970000)]
+  0x000000001802d000 JavaThread "C2 CompilerThread1" daemon [_thread_blocked, id=24364, stack(0x0000000019770000,0x0000000019870000)]
+  0x0000000018027000 JavaThread "C2 CompilerThread0" daemon [_thread_blocked, id=41736, stack(0x0000000019670000,0x0000000019770000)]
+  0x0000000018025800 JavaThread "Attach Listener" daemon [_thread_blocked, id=11936, stack(0x0000000019570000,0x0000000019670000)]
+  0x0000000018024800 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=13388, stack(0x0000000019470000,0x0000000019570000)]
+  0x0000000018010000 JavaThread "Finalizer" daemon [_thread_blocked, id=25012, stack(0x0000000019280000,0x0000000019380000)]
+  0x0000000017fe9000 JavaThread "Reference Handler" daemon [_thread_blocked, id=5328, stack(0x0000000019180000,0x0000000019280000)]
+=>0x0000000003308000 JavaThread "main" [_thread_in_vm, id=46580, stack(0x0000000003200000,0x0000000003300000)]
+
+Other Threads:
+  0x0000000017fe7800 VMThread [stack: 0x0000000019080000,0x0000000019180000] [id=42020]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap:
+ PSYoungGen      total 38400K, used 7368K [0x00000000d5580000, 0x00000000d8000000, 0x0000000100000000)
+  eden space 33280K, 22% used [0x00000000d5580000,0x00000000d5cb2160,0x00000000d7600000)
+  from space 5120K, 0% used [0x00000000d7b00000,0x00000000d7b00000,0x00000000d8000000)
+  to   space 5120K, 0% used [0x00000000d7600000,0x00000000d7600000,0x00000000d7b00000)
+ ParOldGen       total 87552K, used 0K [0x0000000080000000, 0x0000000085580000, 0x00000000d5580000)
+  object space 87552K, 0% used [0x0000000080000000,0x0000000080000000,0x0000000085580000)
+ Metaspace       used 6042K, capacity 6106K, committed 6272K, reserved 1058816K
+  class space    used 751K, capacity 793K, committed 896K, reserved 1048576K
+
+Card table byte_map: [0x00000000127c0000,0x0000000012bd0000] byte_map_base: 0x00000000123c0000
+
+Marking Bits: (ParMarkBitMap*) 0x000000007586b6d0
+ Begin Bits: [0x0000000013280000, 0x0000000015280000)
+ End Bits:   [0x0000000015280000, 0x0000000017280000)
+
+Polling page: 0x00000000013d0000
+
+CodeCache: size=245760Kb used=1626Kb max_used=1626Kb free=244133Kb
+ bounds [0x0000000003400000, 0x0000000003670000, 0x0000000012400000]
+ total_blobs=746 nmethods=421 adapters=239
+ compilation: enabled
+
+Compilation events (10 events):
+Event: 0.853 Thread 0x0000000018038000 nmethod 408 0x00000000035948d0 code [0x0000000003594a60, 0x0000000003594ef0]
+Event: 0.853 Thread 0x0000000018038000  411       1       java.util.Collections$UnmodifiableCollection$1::hasNext (10 bytes)
+Event: 0.853 Thread 0x0000000018038000 nmethod 411 0x00000000035950d0 code [0x0000000003595220, 0x0000000003595368]
+Event: 0.854 Thread 0x0000000018038000  413       1       java.lang.invoke.MemberName::getInvocationType (56 bytes)
+Event: 0.854 Thread 0x0000000018038000 nmethod 413 0x0000000003595550 code [0x00000000035956e0, 0x0000000003595a48]
+Event: 0.854 Thread 0x0000000018038000  415       1       java.util.Arrays::equals (78 bytes)
+Event: 0.854 Thread 0x0000000018038000 nmethod 415 0x0000000003595ed0 code [0x0000000003596040, 0x0000000003596268]
+Event: 0.854 Thread 0x0000000018038000  412       1       java.lang.invoke.MethodHandle::type (5 bytes)
+Event: 0.854 Thread 0x0000000018038000 nmethod 412 0x0000000003596390 code [0x00000000035964e0, 0x00000000035965f0]
+Event: 0.854 Thread 0x0000000018038000  419       1       jdk.internal.org.objectweb.asm.Frame::execute (2252 bytes)
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Internal exceptions (10 events):
+Event: 0.368 Thread 0x0000000003308000 Exception <a 'java/lang/ArrayIndexOutOfBoundsException'> (0x00000000d56caf10) thrown at [C:\re\workspace\8-2-build-windows-amd64-cygwin\jdk8u121\8372\hotspot\src\share\vm\runtime\sharedRuntime.cpp, line 605]
+Event: 0.369 Thread 0x0000000003308000 Exception <a 'java/lang/ArrayIndexOutOfBoundsException'> (0x00000000d56cc178) thrown at [C:\re\workspace\8-2-build-windows-amd64-cygwin\jdk8u121\8372\hotspot\src\share\vm\runtime\sharedRuntime.cpp, line 605]
+Event: 0.369 Thread 0x0000000003308000 Exception <a 'java/lang/ArrayIndexOutOfBoundsException'> (0x00000000d5774180) thrown at [C:\re\workspace\8-2-build-windows-amd64-cygwin\jdk8u121\8372\hotspot\src\share\vm\runtime\sharedRuntime.cpp, line 605]
+Event: 0.376 Thread 0x0000000003308000 Exception <a 'java/lang/ArrayIndexOutOfBoundsException'> (0x00000000d5799c78) thrown at [C:\re\workspace\8-2-build-windows-amd64-cygwin\jdk8u121\8372\hotspot\src\share\vm\runtime\sharedRuntime.cpp, line 605]
+Event: 0.386 Thread 0x0000000003308000 Exception <a 'java/lang/ArrayIndexOutOfBoundsException'> (0x00000000d57a9640) thrown at [C:\re\workspace\8-2-build-windows-amd64-cygwin\jdk8u121\8372\hotspot\src\share\vm\runtime\sharedRuntime.cpp, line 605]
+Event: 0.436 Thread 0x0000000003308000 Exception <a 'java/security/PrivilegedActionException'> (0x00000000d57f6e90) thrown at [C:\re\workspace\8-2-build-windows-amd64-cygwin\jdk8u121\8372\hotspot\src\share\vm\prims\jvm.cpp, line 1390]
+Event: 0.436 Thread 0x0000000003308000 Exception <a 'java/security/PrivilegedActionException'> (0x00000000d57f70a0) thrown at [C:\re\workspace\8-2-build-windows-amd64-cygwin\jdk8u121\8372\hotspot\src\share\vm\prims\jvm.cpp, line 1390]
+Event: 0.437 Thread 0x0000000003308000 Exception <a 'java/security/PrivilegedActionException'> (0x00000000d57fad10) thrown at [C:\re\workspace\8-2-build-windows-amd64-cygwin\jdk8u121\8372\hotspot\src\share\vm\prims\jvm.cpp, line 1390]
+Event: 0.437 Thread 0x0000000003308000 Exception <a 'java/security/PrivilegedActionException'> (0x00000000d57faf20) thrown at [C:\re\workspace\8-2-build-windows-amd64-cygwin\jdk8u121\8372\hotspot\src\share\vm\prims\jvm.cpp, line 1390]
+Event: 0.778 Thread 0x0000000003308000 Exception <a 'java/lang/ClassNotFoundException': javax/management/remote/rmi/RMIJRMPServerImpl$ExportedWrapper_Stub> (0x00000000d5b46ba8) thrown at [C:\re\workspace\8-2-build-windows-amd64-cygwin\jdk8u121\8372\hotspot\src\share\vm\classfile\systemDictiona
+
+Events (10 events):
+Event: 0.842 loading class java/lang/invoke/MethodHandleImpl$AsVarargsCollector
+Event: 0.842 loading class java/lang/invoke/DelegatingMethodHandle
+Event: 0.843 loading class java/lang/invoke/DelegatingMethodHandle done
+Event: 0.843 loading class java/lang/invoke/MethodHandleImpl$AsVarargsCollector done
+Event: 0.843 loading class java/lang/invoke/WrongMethodTypeException
+Event: 0.843 loading class java/lang/invoke/WrongMethodTypeException done
+Event: 0.845 loading class java/lang/invoke/MethodHandleImpl$Lazy
+Event: 0.845 loading class java/lang/invoke/MethodHandleImpl$Lazy done
+Event: 0.845 loading class java/lang/invoke/MethodHandleImpl$IntrinsicMethodHandle
+Event: 0.845 loading class java/lang/invoke/MethodHandleImpl$IntrinsicMethodHandle done
+
+
+Dynamic libraries:
+0x00007ff7ec450000 - 0x00007ff7ec487000 	C:\Program Files\Java\jre1.8.0_121\bin\javaw.exe
+0x00007ffd71040000 - 0x00007ffd71221000 	C:\WINDOWS\SYSTEM32\ntdll.dll
+0x00007ffd70990000 - 0x00007ffd70a42000 	C:\WINDOWS\System32\KERNEL32.DLL
+0x00007ffd6d7d0000 - 0x00007ffd6da43000 	C:\WINDOWS\System32\KERNELBASE.dll
+0x00007ffd70800000 - 0x00007ffd708a1000 	C:\WINDOWS\System32\ADVAPI32.dll
+0x00007ffd70f00000 - 0x00007ffd70f9e000 	C:\WINDOWS\System32\msvcrt.dll
+0x00007ffd70690000 - 0x00007ffd706eb000 	C:\WINDOWS\System32\sechost.dll
+0x00007ffd6fba0000 - 0x00007ffd6fcc4000 	C:\WINDOWS\System32\RPCRT4.dll
+0x00007ffd70d70000 - 0x00007ffd70f00000 	C:\WINDOWS\System32\USER32.dll
+0x00007ffd6da50000 - 0x00007ffd6da70000 	C:\WINDOWS\System32\win32u.dll
+0x00007ffd6e4d0000 - 0x00007ffd6e4f8000 	C:\WINDOWS\System32\GDI32.dll
+0x00007ffd6d5b0000 - 0x00007ffd6d742000 	C:\WINDOWS\System32\gdi32full.dll
+0x00007ffd6d410000 - 0x00007ffd6d4af000 	C:\WINDOWS\System32\msvcp_win.dll
+0x00007ffd6dad0000 - 0x00007ffd6dbca000 	C:\WINDOWS\System32\ucrtbase.dll
+0x00007ffd6b590000 - 0x00007ffd6b7f9000 	C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.17134.228_none_fb4599993062b194\COMCTL32.dll
+0x00007ffd6ff10000 - 0x00007ffd70233000 	C:\WINDOWS\System32\combase.dll
+0x00007ffd6d750000 - 0x00007ffd6d7ca000 	C:\WINDOWS\System32\bcryptPrimitives.dll
+0x00007ffd6fe30000 - 0x00007ffd6fe5d000 	C:\WINDOWS\System32\IMM32.DLL
+0x00007ffd6d1f0000 - 0x00007ffd6d24d000 	C:\Program Files\Citrix\System32\MfApHook64.dll
+0x00007ffd6cad0000 - 0x00007ffd6cafb000 	C:\Program Files\Citrix\ICAService\CtxDodHook64.dll
+0x00007ffd6d110000 - 0x00007ffd6d142000 	C:\Program Files\Citrix\ICAService\picaFullScreenHookX64.dll
+0x00007ffd6cb00000 - 0x00007ffd6cb4e000 	C:\Program Files\Citrix\ICAService\ShellHook64.dll
+0x00007ffd6e760000 - 0x00007ffd6fba0000 	C:\WINDOWS\System32\SHELL32.dll
+0x00007ffd6d4b0000 - 0x00007ffd6d4f9000 	C:\WINDOWS\System32\cfgmgr32.dll
+0x00007ffd6fe60000 - 0x00007ffd6ff09000 	C:\WINDOWS\System32\shcore.dll
+0x00007ffd6ddc0000 - 0x00007ffd6e4cd000 	C:\WINDOWS\System32\windows.storage.dll
+0x00007ffd708b0000 - 0x00007ffd70901000 	C:\WINDOWS\System32\shlwapi.dll
+0x00007ffd6d3f0000 - 0x00007ffd6d401000 	C:\WINDOWS\System32\kernel.appcore.dll
+0x00007ffd6d3c0000 - 0x00007ffd6d3df000 	C:\WINDOWS\System32\profapi.dll
+0x00007ffd6d370000 - 0x00007ffd6d3bc000 	C:\WINDOWS\System32\powrprof.dll
+0x00007ffd6d3e0000 - 0x00007ffd6d3ea000 	C:\WINDOWS\System32\FLTLIB.DLL
+0x00007ffd6c950000 - 0x00007ffd6cacc000 	C:\Program Files\Citrix\ICAService\SCardHook64.dll
+0x00007ffd6c650000 - 0x00007ffd6c67a000 	C:\Program Files\Citrix\ICAService\cxinjime64.dll
+0x00007ffd6c600000 - 0x00007ffd6c648000 	C:\Program Files\Citrix\ICAService\PicaWtsHook64.dll
+0x0000000074e10000 - 0x0000000074ee2000 	C:\Program Files\Java\jre1.8.0_121\bin\msvcr100.dll
+0x0000000075050000 - 0x00000000758eb000 	C:\Program Files\Java\jre1.8.0_121\bin\server\jvm.dll
+0x00007ffd6e680000 - 0x00007ffd6e688000 	C:\WINDOWS\System32\PSAPI.DLL
+0x00007ffd6d000000 - 0x00007ffd6d00a000 	C:\WINDOWS\SYSTEM32\VERSION.dll
+0x00007ffd5d350000 - 0x00007ffd5d359000 	C:\WINDOWS\SYSTEM32\WSOCK32.dll
+0x00007ffd5e6b0000 - 0x00007ffd5e6d3000 	C:\WINDOWS\SYSTEM32\WINMM.dll
+0x00007ffd70c00000 - 0x00007ffd70c6c000 	C:\WINDOWS\System32\WS2_32.dll
+0x00007ffd5e520000 - 0x00007ffd5e54a000 	C:\WINDOWS\SYSTEM32\WINMMBASE.dll
+0x00000000763d0000 - 0x00000000763df000 	C:\Program Files\Java\jre1.8.0_121\bin\verify.dll
+0x0000000075d20000 - 0x0000000075d49000 	C:\Program Files\Java\jre1.8.0_121\bin\java.dll
+0x0000000075c00000 - 0x0000000075c16000 	C:\Program Files\Java\jre1.8.0_121\bin\zip.dll
+0x0000000074ef0000 - 0x0000000074efd000 	C:\Program Files\Java\jre1.8.0_121\bin\management.dll
+0x0000000074f50000 - 0x0000000074f6a000 	C:\Program Files\Java\jre1.8.0_121\bin\net.dll
+0x00007ffd6c090000 - 0x00007ffd6c0f6000 	C:\WINDOWS\system32\mswsock.dll
+0x0000000074f30000 - 0x0000000074f41000 	C:\Program Files\Java\jre1.8.0_121\bin\nio.dll
+0x00007ffd63600000 - 0x00007ffd63616000 	C:\WINDOWS\system32\napinsp.dll
+0x00007ffd635e0000 - 0x00007ffd635fa000 	C:\WINDOWS\system32\pnrpnsp.dll
+0x00007ffd673e0000 - 0x00007ffd673f9000 	C:\WINDOWS\system32\NLAapi.dll
+0x00007ffd6be60000 - 0x00007ffd6bf1e000 	C:\WINDOWS\SYSTEM32\DNSAPI.dll
+0x00007ffd70fa0000 - 0x00007ffd70fa8000 	C:\WINDOWS\System32\NSI.dll
+0x00007ffd6be20000 - 0x00007ffd6be58000 	C:\WINDOWS\SYSTEM32\IPHLPAPI.DLL
+0x00007ffd63620000 - 0x00007ffd6362e000 	C:\WINDOWS\System32\winrnr.dll
+0x00007ffd65480000 - 0x00007ffd6548a000 	C:\Windows\System32\rasadhlp.dll
+0x00007ffd67620000 - 0x00007ffd67692000 	C:\WINDOWS\System32\fwpuclnt.dll
+0x00007ffd6cbc0000 - 0x00007ffd6cbe5000 	C:\WINDOWS\SYSTEM32\bcrypt.dll
+0x00007ffd6c240000 - 0x00007ffd6c257000 	C:\WINDOWS\SYSTEM32\CRYPTSP.dll
+0x00007ffd6bc20000 - 0x00007ffd6bc53000 	C:\WINDOWS\system32\rsaenh.dll
+0x00007ffd6d280000 - 0x00007ffd6d2a8000 	C:\WINDOWS\SYSTEM32\USERENV.dll
+0x00007ffd6c260000 - 0x00007ffd6c26b000 	C:\WINDOWS\SYSTEM32\CRYPTBASE.dll
+0x00007ffd67f80000 - 0x00007ffd67f96000 	C:\WINDOWS\SYSTEM32\dhcpcsvc6.DLL
+0x00007ffd67f60000 - 0x00007ffd67f7a000 	C:\WINDOWS\SYSTEM32\dhcpcsvc.DLL
+
+VM Arguments:
+jvm_args: -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=64697 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Djava.rmi.server.hostname=localhost -Dspring.liveBeansView.mbeanDomain -Dspring.application.admin.enabled=true -Xverify:none -XX:TieredStopAtLevel=1 -Dfile.encoding=UTF-8 
+java_command: com.cg.eureka.eurekaservice.EurekaServiceApplication --spring.output.ansi.enabled=always
+java_class_path (initial): C:\eureka\eureka-service\target\classes;C:\Users\rapola\.m2\repository\org\springframework\cloud\spring-cloud-starter-netflix-eureka-server\2.0.2.RELEASE\spring-cloud-starter-netflix-eureka-server-2.0.2.RELEASE.jar;C:\Users\rapola\.m2\repository\org\springframework\cloud\spring-cloud-starter\2.0.2.RELEASE\spring-cloud-starter-2.0.2.RELEASE.jar;C:\Users\rapola\.m2\repository\org\springframework\cloud\spring-cloud-context\2.0.2.RELEASE\spring-cloud-context-2.0.2.RELEASE.jar;C:\Users\rapola\.m2\repository\org\springframework\security\spring-security-crypto\5.1.3.RELEASE\spring-security-crypto-5.1.3.RELEASE.jar;C:\Users\rapola\.m2\repository\org\springframework\cloud\spring-cloud-commons\2.0.2.RELEASE\spring-cloud-commons-2.0.2.RELEASE.jar;C:\Users\rapola\.m2\repository\org\springframework\security\spring-security-rsa\1.0.7.RELEASE\spring-security-rsa-1.0.7.RELEASE.jar;C:\Users\rapola\.m2\repository\org\bouncycastle\bcpkix-jdk15on\1.60\bcpkix-jdk15on-1.60.jar;C:\Users\rapola\.m2\repository\org\bouncycastle\bcprov-jdk15on\1.60\bcprov-jdk15on-1.60.jar;C:\Users\rapola\.m2\repository\org\springframework\cloud\spring-cloud-netflix-eureka-server\2.0.2.RELEASE\spring-cloud-netflix-eureka-server-2.0.2.RELEASE.jar;C:\Users\rapola\.m2\repository\org\springframework\boot\spring-boot-starter-web\2.1.2.RELEASE\spring-boot-starter-web-2.1.2.RELEASE.jar;C:\Users\rapola\.m2\repository\org\springframework\boot\spring-boot-starter-json\2.1.2.RELEASE\spring-boot-starter-json-2.1.2.RELEASE.jar;C:\Users\rapola\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jdk8\2.9.8\jackson-datatype-jdk8-2.9.8.jar;C:\Users\rapola\.m2\repository\com\fasterxml\jackson\module\jackson-module-parameter-names\2.9.8\jackson-module-parameter-names-2.9.8.jar;C:\Users\rapola\.m2\repository\org\springframework\boot\spring-boot-starter-tomcat\2.1.2.RELEASE\spring-boot-starter-tomcat-2.1.2.RELEASE.jar;C:\Users\rapola\.m2\repository\org\apache\tomcat\embed\tomcat-embed-core\9
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+PATH=C:/Program Files/Java/jre1.8.0_121/bin/server;C:/Program Files/Java/jre1.8.0_121/bin;C:/Program Files/Java/jre1.8.0_121/lib/amd64;C:\Python34\;C:\Python34\Scripts;C:\oraclexe\app\oracle\product\11.2.0\server\bin;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\TortoiseSVN\bin;C:\Program Files\nodejs\;C:\Program Files\Git\cmd;C:\Program Files (x86)\Microsoft SQL Server\110\Tools\Binn\ManagementStudio\;C:\Program Files (x86)\Microsoft SQL Server\110\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\110\DTS\Binn\;C:\Program Files\Citrix\System32\;C:\Program Files\Citrix\ICAService\;C:\WINDOWS\System32\OpenSSH\;C:\Users\rapola\AppData\Local\Microsoft\WindowsApps;;C:\Users\rapola\Desktop\spring-tool-suite-3.9.6.RELEASE-e4.9.0-win32-x86_64\sts-bundle\sts-3.9.6.RELEASE;
+USERNAME=rapola
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 15 Model 6 Stepping 1, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 10.0 , 64 bit Build 17134 (10.0.17134.1)
+
+CPU:total 4 (2 cores per cpu, 1 threads per core) family 15 model 6 stepping 1, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, avx2, aes, clmul, erms, rtm, 3dnowpref, lzcnt, tsc, bmi1, bmi2, adx
+
+Memory: 4k page, physical 8388056k(1083440k free), swap 18697820k(5120k free)
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (25.121-b13) for windows-amd64 JRE (1.8.0_121-b13), built on Dec 12 2016 18:21:36 by "java_re" with MS VC++ 10.0 (VS2010)
+
+time: Wed Jan 23 15:10:40 2019
+elapsed time: 0 seconds (0d 0h 0m 0s)
+
